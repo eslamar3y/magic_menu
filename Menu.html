@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./LineAwesome/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon"><i class="las la-igloo"></i></span>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="las la-users"></i></span>
+            <span class="text">Customesrs</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="las la-clipboard-list"></i></span>
+            <span class="text">Products</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="las la-shopping-bag"></i></span>
+            <span class="text">Orders</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="las la-receipt"></i></span>
+            <span class="text">Promo-codes</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="las la-user-circle"></i></span>
+            <span class="text">Accounts</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activelink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activelink));
+    </script>
+  </body>
+</html>
